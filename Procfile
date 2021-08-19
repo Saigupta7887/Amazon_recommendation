@@ -1,1 +1,1 @@
-web: python app.py --bind 0.0.0.0:${PORT} wsgi
+web: sh setup.sh && streamlit run app.py
