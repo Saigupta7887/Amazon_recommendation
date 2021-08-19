@@ -40,6 +40,8 @@ def main():
 	            st.markdown('<p style="text-align: center;"><span style="font-size: 18px;color: #B12704;">₹{}</span>&nbsp;<span style="color: grey; text-decoration: line-through; color:#565959;">₹{}</span></p>'.format(recommendation['Disc_price'].values[count],recommendation['Actual_price'].values[count]), unsafe_allow_html=True)
 	            count += 1
          return 
+
 		
-if __name__ == '__main__':
-    main()
+ if __name__ == "__main__":
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
