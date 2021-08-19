@@ -51,3 +51,7 @@ if st.button('Show Recommendation'):
 	unsafe_allow_html=True)
 	            st.markdown('<p style="text-align: center;"><span style="font-size: 18px;color: #B12704;">₹{}</span>&nbsp;<span style="color: grey; text-decoration: line-through; color:#565959;">₹{}</span></p>'.format(recommendation['Disc_price'].values[count],recommendation['Actual_price'].values[count]), unsafe_allow_html=True)
 	            count += 1
+
+		
+if __name__ == '__main__':
+    main()
