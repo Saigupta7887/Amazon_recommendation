@@ -19,7 +19,7 @@ simalri=pd.read_csv("final.csv")
 
  
 
-st.title('Amazon Dress Recommendation System')
+st.title('Sai Dress Recommendation System')
 options = dress_dict['Dress_type']
 index = st.selectbox("selectbox", range(len(options)), format_func=lambda x: options[x])
 
