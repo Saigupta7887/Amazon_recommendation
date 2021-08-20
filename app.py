@@ -19,9 +19,9 @@ simalri=pd.read_csv("final.csv")
 
  
 
-st.title('Sai Dress Recommendation System')
+st.title('Dress Recommendation System')
 options = dress_dict['Dress_type']
-index = st.selectbox("selectbox", range(len(options)), format_func=lambda x: options[x])
+index = st.selectbox("Which kind of dress you are looking for?", range(len(options)), format_func=lambda x: options[x])
 
 
 def recommend(index):
