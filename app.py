@@ -40,7 +40,7 @@ if st.button('Show Recommendation'):
 
 
 	for i in range(4):
-	    for j in st.columns(5):
+	    for j in st.columns(4):
 
 	        if count == 10:
 	            break
