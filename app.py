@@ -10,6 +10,12 @@
 # In[ ]:
 
 
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+
 import streamlit as st
 import pickle
 import pandas as pd
@@ -56,9 +62,11 @@ if st.button('Show Recommendation'):
 	unsafe_allow_html=True)
             st.markdown('<p style="text-align:-webkit-auto;">{}</p>'.format(recommendation['Brand'].values[0]),
 	unsafe_allow_html=True)
-            st.markdown('<p style="text-align: -webkit-auto;"><span style="font-size: 18px;color: #B12704;">₹{}</span>&nbsp;<span style="color: grey; text-decoration: line-through; color:#565959;">₹{}</span></p>'.format(recommendation['Disc_price'].values[0],recommendation['Actual_price'].values[0]), unsafe_allow_html=True)
+            st.markdown('<p style="text-align: -webkit-auto;"><span style="font-size: 18px;color: #B12704;">₹{}</span>&nbsp;<span style="color: grey; text-decoration: line-through; color:#565959;">₹{}</span></p>'.format(recommendation['Disc_price'].values[0],recommendation['Actual_price'][0]), unsafe_allow_html=True)
 	
-        st.markdown('<p style="font-size: 1.2rem;">Products related to this item:</p>', unsafe_allow_html=True)
+	st.markdown('<p style="font-size: 1.2rem;">Products related to this item:</p>', unsafe_allow_html=True)
+
+
 	count = 1
 	for i in range(4):
 	    for j in st.columns(3):
