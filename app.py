@@ -37,12 +37,27 @@ def recommend(index):
 if st.button('Show Recommendation'):
 	recommendation=recommend(index)
 	recommendation=pd.DataFrame(recommendation)
-	count = 0
+	title_container = st.container()
+	col1, col2 = st.columns([1, 2])
 
+    
 
+	with title_container:
+          with col1:
+                  st.text(" ")
 
+          with col2:
+            st.image(recommendation['Image'][0])
+            st.markdown('<p style="text-align: -webkit-auto; font-weight:bold;">{}</p>'.format(recommendation['Dress_type'][0]),
+	unsafe_allow_html=True)
+            st.markdown('<p style="text-align:-webkit-auto;">{}</p>'.format(recommendation['Brand'][0]),
+	unsafe_allow_html=True)
+            st.markdown('<p style="text-align: -webkit-auto;"><span style="font-size: 18px;color: #B12704;">₹{}</span>&nbsp;<span style="color: grey; text-decoration: line-through; color:#565959;">₹{}</span></p>'.format(recommendation['Disc_price'][0],recommendation['Actual_price'][0]), unsafe_allow_html=True)
+	
+
+	count = 1
 	for i in range(4):
-	    for j in st.columns(4):
+	    for j in st.columns(3):
 
 	        if count == 10:
 	            break
