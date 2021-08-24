@@ -58,11 +58,9 @@ if st.button('Show Recommendation'):
 
           with col2:
             st.image(recommendation['Image'].values[0])
-            st.markdown('<p style="text-align: -webkit-auto; font-weight:bold;">{}</p>'.format(recommendation['Dress_type'].values[0]),
-	unsafe_allow_html=True)
-            st.markdown('<p style="text-align:-webkit-auto;">{}</p>'.format(recommendation['Brand'].values[0]),
-	unsafe_allow_html=True)
-            st.markdown('<p style="text-align: -webkit-auto;"><span style="font-size: 18px;color: #B12704;">₹{}</span>&nbsp;<span style="color: grey; text-decoration: line-through; color:#565959;">₹{}</span></p>'.format(recommendation['Disc_price'].values[0],recommendation['Actual_price'][0]), unsafe_allow_html=True)
+            st.markdown('<p style="text-align: -webkit-auto; font-weight:bold;">{}</p>'.format(recommendation['Dress_type'].values[0]),unsafe_allow_html=True)
+            st.markdown('<p style="text-align:-webkit-auto;">{}</p>'.format(recommendation['Brand'].values[0]),unsafe_allow_html=True)
+            st.markdown('<p style="text-align: -webkit-auto;"><span style="font-size: 18px;color: #B12704;">₹{}</span>&nbsp;<span style="color: grey; text-decoration: line-through; color:565959;">₹{}</span></p>'.format(recommendation['Disc_price'].values[0],recommendation['Actual_price'].values[0]), unsafe_allow_html=True)
 	
 	st.markdown('<p style="font-size: 1.2rem;">Products related to this item:</p>', unsafe_allow_html=True)
 
